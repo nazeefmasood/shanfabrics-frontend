@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { products } from "../../images/dummy_products";
 const getRandomHeight = () => {
-  return Math.floor(Math.random() * (450 - 350 + 5)) + 350; 
+  return Math.floor(Math.random() * (450 - 350 + 5)) + 350;
 };
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,16 +19,19 @@ const HeroSection = () => {
   const handleIndicatorClick = (index) => {
     setCurrentIndex(index);
   };
-
+  const handleNext = () => {
+    // If current index is the last one, go back to the first, otherwise go to the next product
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+  };
   useEffect(() => {
     // Generate random heights for each product card
     const randomHeights = products.map(() => getRandomHeight());
     setHeights(randomHeights);
-    /* const interval = setInterval(handleNext, 3000); // Change slide every 3 seconds
-    return () => clearInterval(interval); // Cleanup on unmount */
+    const interval = setInterval(handleNext, 6000); // Change slide every 3 seconds
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
   return (
-    <div>
+    <div className="relative">
       <div className=" ticker text-white py-2">
         <ul className="">
           <li className="text-black flex gap-5">
@@ -668,7 +671,7 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
-        <div className=" left-0 right-0 flex justify-center space-x-2">
+        <div className="absolute bottom-5  left-0 right-0 flex justify-center space-x-2">
           {products.map((_, index) => (
             <div
               key={index}

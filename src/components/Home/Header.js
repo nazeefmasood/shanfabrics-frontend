@@ -14,10 +14,10 @@ const Header = () => {
           year: "numeric",
           month: "long",
           day: "numeric",
-          hour:"2-digit",
-          minute:"2-digit",
-          second:"2-digit",
-          hour12:true,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
         });
         setCurrentDate(formattedDate);
       };
@@ -39,7 +39,7 @@ const Header = () => {
         >
           MENU
         </a>
-        <a className="font-fredoka font-bold text-[30px] cursor-pointer">
+        <a className="font-fredoka font-semibold text-[30px] cursor-pointer">
           SHAN FABRICS
         </a>
         <a
@@ -63,16 +63,16 @@ const Header = () => {
               openCartMenu ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="font-fredoka font-semibold text-[36px] cursor-pointer flex gap-1">
-                CART <div className=" text-black px-3 ">0</div>
+                CART <div className=" text-white px-3 ">0</div>
               </p>
-              <p
-                className="font-fredoka font-semibold text-[22px] cursor-pointer "
-                onClick={() => setOpenCart(false)}
+              <a
+                className="font-fredoka font-semibold text-[30px] cursor-pointer flex gap-1"
+                onClick={() => setOpenCart(!openCartMenu)}
               >
-                &times;
-              </p>
+                 <div className="bg-black text-white px-3">X</div>
+              </a>
             </div>
 
             {/* Cart content */}
@@ -84,21 +84,27 @@ const Header = () => {
       )}
 
       {openMenu && (
-        <div className="fixed top-0 w-screen h-screen left-0, bottom-0 right-0 bg-black z-50 p-8">
-          <div className="flex justify-between">
-            <p className="font-fredoka font-semibold text-[30px] cursor-pointer text-white">
-              MENU
-            </p>
-            <p className="font-robson font-semibold text-[36px] uppercase cursor-pointer text-gray-500 tra">
-              {currentDate}
-            </p>
+        <div className="fixed top-0 w-screen h-screen left-0, bottom-0 right-0 bg-white z-50">
+          <div className="flex justify-between p-8 border-b-[1px] border-black">
             <p
-              className="font-fredoka font-semibold text-[30px] cursor-pointer text-white"
+              className="font-fredoka font-semibold text-[30px] cursor-pointer text-black"
               onClick={() => setOpenMenu(false)}
             >
-              CLOSE
+              MENU
+            </p>
+            <p className="font-fredoka font-semibold text-[30px] cursor-pointer text-black ">
+              SHAN FABRICS
+            </p>
+            <p
+              className="font-fredoka font-semibold flex gap-2 text-[30px] cursor-pointer text-black"
+              onClick={() => setOpenMenu(false)}
+            >
+              CLOSE <div className=" bg-black text-white px-3 ">X</div>
             </p>
           </div>
+          <p className="font-robson absolute font-semibold text-[36px] text-center uppercase cursor-pointer text-gray-500 p-8 bottom-0">
+            {currentDate}
+          </p>
         </div>
       )}
     </header>

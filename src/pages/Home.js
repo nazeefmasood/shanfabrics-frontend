@@ -12,7 +12,7 @@ import Reviews from "../components/Home/Reviews";
 
 const Home = () => {
   return (
-    <div className="w-full max-w-screen mx-auto   ">
+    <div className="w-full max-w-screen mx-auto  overflow-x-hidden ">
       <Header />
       <HeroSection />
       <Products />

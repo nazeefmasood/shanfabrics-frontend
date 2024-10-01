@@ -656,7 +656,7 @@ const HeroSection = () => {
             >
               <div className="overflow-hidden h-full">
                 <div className="p-5 text-start border-t-[1px] hover:border-t-black">
-                  <p className="font-semibold ">{product.title}</p>
+                  <p className="font-robson text-[28px] tracking-wide uppercase">{product.title}</p>
                   <p className="text-sm text-gray-500 mt-3">
                     {product.category}
                   </p>

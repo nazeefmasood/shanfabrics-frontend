@@ -4,7 +4,7 @@ import { products } from "../../images/dummy_products";
 const Instagram = () => {
   const filteredImages = products.slice(0, 4);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen my-10">
       <div className="flex justify-between items-center gap-2">
         <hr className="h-[2px] bg-black flex-1" />
         <h2 className="font-robson min-w-min font-bold text-[40px] tracking-wider cursor-pointer">

@@ -16,7 +16,7 @@ const Categories = () => {
           <div className="flex gap-2">
             <img
               src={category.image}
-              className="w-56 h-24 object-cover rounded-lg mt-4"
+              className="w-56 h-24 object-cover  mt-4"
             />
             <div className="flex">
               <h2 className="font-robson text-[40px] tracking-wider uppercase items-start">

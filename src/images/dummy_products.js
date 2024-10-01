@@ -160,3 +160,40 @@ export const categories = [
     image: bag, // Replace with your actual image URL
   },
 ];
+export const reviews = [
+  {
+    name: "Ahmed Khan",
+    image:product_1,
+    rating: 5,
+    comment: "Bohat zabardast product! Paisay wasool!",
+    date: "2024-09-01",
+  },
+  {
+    name: "Sara Ali",
+    rating: 4,
+    image:product_2,
+    comment: "Quality achi hai, lekin delivery thori late thi.",
+    date: "2024-08-28",
+  },
+  {
+    name: "Usman Raza",
+    rating: 3,
+    image:product_3,
+    comment: "Theek thaak hai, kuch khaas nahi.",
+    date: "2024-09-15",
+  },
+  {
+    name: "Zainab Farooq",
+    rating: 5,
+    image:product_4,
+    comment: "Mujhe bohat pasand aya! Jaldi delivery bhi hui.",
+    date: "2024-09-12",
+  },
+  {
+    name: "Hamza Sheikh",
+    rating: 2,
+    image:product_5,
+    comment: "Description se bilkul different nikla. Mayoos ho gaya.",
+    date: "2024-09-03",
+  },
+];

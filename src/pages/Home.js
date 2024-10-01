@@ -6,6 +6,9 @@ import Categories from "../components/Home/Categories";
 import Featured from "../components/Home/Featured";
 import Explore from "../components/Home/Explore";
 import Instagram from "../components/Home/Instagram";
+import Faq from "../components/Home/Faq";
+import Footer from "../components/Home/Footer";
+import Reviews from "../components/Home/Reviews";
 
 const Home = () => {
   return (
@@ -17,6 +20,9 @@ const Home = () => {
       <Featured />
       <Explore />
       <Instagram />
+      <Faq />
+      <Reviews />
+      <Footer />
     </div>
   );
 };

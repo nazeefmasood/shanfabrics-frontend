@@ -50,6 +50,7 @@
     font-weight: 800;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Robson';
     src: url("./fonts/font_12.otf") format('opentype');
@@ -86,4 +87,17 @@
     to {
         transform: translateX(calc(-100% - 8px));
     }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }

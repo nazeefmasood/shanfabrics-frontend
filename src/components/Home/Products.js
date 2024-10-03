@@ -75,7 +75,7 @@ const Products = () => {
             onClick={() => navigate(`/product/${product.id}`)}
           >
             <img
-              src={product.image[1]}
+              src={product.image[0]}
               className="object-cover cursor-pointer"
               style={{ height: "100%", width: "100%" }}
             />

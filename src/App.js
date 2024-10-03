@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Checkout from "./pages/Checkout";
 import Layout from "./components/Layout";
 import ProductDetails from "./pages/ProductDetails";
+import ScrollToTop from "./components/Scroll/ScrollToTop";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
       </Route>
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }

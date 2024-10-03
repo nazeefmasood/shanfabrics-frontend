@@ -12,18 +12,20 @@ const FAQProduct = ({ faqItems }) => {
       {faqItems.map((item, index) => (
         <div key={index}>
           <div
-            className="faq-title cursor-pointer py-2 border-b"
+            className="cursor-pointer py-2 border-b flex justify-between"
             onClick={() => toggleSection(index)}
           >
-            <h3 className="text-lg font-bold">{item.title}</h3>
-            <h3 className="text-lg font-bold">{openSection ? "X" : "+"}</h3>
+            <h3 className="font-fredoka uppercase font-bold">{item.title}</h3>
+            <h3 className="text-lg font-bold">
+              {openSection == index ? "-" : "+"}
+            </h3>
           </div>
           {openSection === index && (
             <div className="faq-content py-4">
-              <p className="mb-2 text-gray-700">{item.description}</p>
-              <ul className="list-disc ml-5 text-gray-600">
+              <p className="mb-2 text-gray-900 text-sm font-fredoka font-medium uppercase">{item.description}</p>
+              <ul className="list-disc ml-5 text-sm text-gray-700">
                 {item.listItems.map((li, idx) => (
-                  <li key={idx} className="py-1">
+                  <li key={idx} className="py-1 text-sm font-bold uppercase">
                     {li}
                   </li>
                 ))}

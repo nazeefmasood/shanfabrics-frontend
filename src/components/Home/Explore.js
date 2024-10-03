@@ -67,7 +67,7 @@ const Explore = () => {
           {products.map((product, index) => (
             <div className="w-full h-full flex-shrink-0" key={index}>
               <img
-                src={product.image}
+                src={product.image[0]}
                 alt={product.title} // Add alt text for accessibility
                 className="object-cover w-full h-full"
               />

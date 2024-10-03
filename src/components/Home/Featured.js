@@ -17,7 +17,7 @@ const Featured = () => {
       <div className="flex h-[80vh] gap-2 overflow-hidden">
         <div className="  bg-slate-400 relative">
           <img
-            src={randomProducts && randomProducts[0].image}
+            src={randomProducts && randomProducts[0].image[0]}
             className="object-cover cursor-pointer"
             style={{ height: "100%", width: "100%" }}
           />
@@ -69,7 +69,7 @@ const Featured = () => {
             <div className="h-[400px]">
               <img
                 className="w-full h-full object-cover"
-                src={randomProducts && randomProducts[1].image}
+                src={randomProducts && randomProducts[1].image[1]}
               />
               <p className="py-5 font-fedroka font-medium text-[16px] uppercase bg-white  text-center">
                 {randomProducts && randomProducts[1].description}
@@ -83,7 +83,7 @@ const Featured = () => {
               </p>
               <img
                 className="w-full h-full object-cover"
-                src={randomProducts && randomProducts[2].image}
+                src={randomProducts && randomProducts[2].image[2]}
               />
             </div>
           </div>

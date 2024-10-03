@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { products } from "../../images/dummy_products";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
   const [hoverIndex, setHoverIndex] = useState(null);
   const featuredProducts = products.slice(0, 3);
   const newProducts = products.slice(0, 8);
@@ -26,7 +28,7 @@ const Products = () => {
               onMouseLeave={() => setHoverIndex(null)}
             >
               <img
-                src={product.image}
+                src={product.image[1]}
                 className="object-cover cursor-pointer"
                 style={{ height: "600px", width: "400px" }} // Adjust the height and width as needed
                 alt={product.title}
@@ -70,9 +72,10 @@ const Products = () => {
             className="min-h-[620px] cursor-pointer relative overflow-hidden group"
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
+            onClick={() => navigate(`/product/${product.id}`)}
           >
             <img
-              src={product.image}
+              src={product.image[1]}
               className="object-cover cursor-pointer"
               style={{ height: "100%", width: "100%" }}
             />

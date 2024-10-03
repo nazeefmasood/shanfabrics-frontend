@@ -662,7 +662,7 @@ const HeroSection = () => {
                   </p>
                 </div>
                 <img
-                  src={product.image}
+                  src={product.image[1]}
                   alt={product.title}
                   className="w-full object-cover"
                   style={{ height: `${heights[index] * 0.8}px` }} // Adjust image height based on card height

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { products } from "../../images/dummy_products";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [openCartMenu, setOpenCart] = useState(false);
+  const navigate = useNavigate();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -115,12 +117,12 @@ const Header = () => {
             </div>
 
             {/* Cart Items */}
-            <div className="flex flex-col gap-3 mt-10 overflow-y-auto max-h-[60vh] pr-4 no-scrollbar">
+            <div className="flex flex-col gap-3 mt-10 overflow-y-auto max-h-[64vh] pr-4 no-scrollbar">
               {cartItems.map((product, index) => (
                 <div key={product.id} className="flex gap-5 items-center">
                   <div className="w-[120px] h-[150px] overflow-hidden">
                     <img
-                      src={product.image}
+                      src={product.image[0]}
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -220,7 +222,10 @@ const Header = () => {
                   {totalPrice} PKR
                 </p>
               </div>
-              <button className="bg-[#5123db] font-robson text-[32px] tracking-wider uppercase font-semibold py-2 mt-10 w-full text-white">
+              <button
+                className="bg-[#5123db] font-robson text-[32px] tracking-wider uppercase font-semibold py-2 mt-10 w-full text-white"
+                onClick={() => navigate("/checkout")}
+              >
                 Checkout
               </button>
             </div>

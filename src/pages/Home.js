@@ -9,11 +9,11 @@ import Instagram from "../components/Home/Instagram";
 import Faq from "../components/Home/Faq";
 import Footer from "../components/Home/Footer";
 import Reviews from "../components/Home/Reviews";
+import Layout from "../components/Layout";
 
 const Home = () => {
   return (
-    <div className="w-full max-w-screen mx-auto  overflow-x-hidden ">
-      <Header />
+    <div>
       <HeroSection />
       <Products />
       <Categories />
@@ -22,7 +22,6 @@ const Home = () => {
       <Instagram />
       <Faq />
       <Reviews />
-      <Footer />
     </div>
   );
 };

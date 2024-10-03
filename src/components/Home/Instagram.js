@@ -96,7 +96,7 @@ const Instagram = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  mt-4 overflow-hidden">
         {filteredImages.map((product) => (
-          <img src={product.image} className="w-full h-full object-cover" />
+          <img src={product.image[1]} className="w-full h-full object-cover" />
         ))}
       </div>
       <div></div>

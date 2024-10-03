@@ -76,7 +76,10 @@ const Header = () => {
         >
           MENU
         </a>
-        <a className="font-fredoka font-semibold text-[30px] cursor-pointer">
+        <a
+          className="font-fredoka font-semibold text-[30px] cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           SHAN FABRICS
         </a>
         <a

@@ -76,7 +76,9 @@ const OrderSummary = () => {
         </div>
         <MyButton
           title={"PLACE ORDER"}
-          styles={"font-robson text-[28px] w-full mt-5 tracking-wider"}
+          styles={
+            "font-robson h-full text-white py-2 px-20 rounded  transition duration-300  bg-[#2f04c8] hover:bg-[#24038e] text-[28px] w-full mt-5 tracking-wider"
+          }
         />
       </div>
     </div>

@@ -80,15 +80,21 @@ const CheckoutForm = () => {
           />
           <MyButton
             title={"Apply"}
-            styles={"font-robson w-max text-[28px] tracking-wider"}
+            styles={
+              "font-robson h-full text-white py-2 px-20 rounded  transition duration-300  bg-[#2f04c8] w-max text-[28px] hover:bg-[#24038e] tracking-wider"
+            }
           />
         </div>
       </div>
 
       <div className="flex mt-10 border-t-[1px] border-gray-500 border-dashed py-3 gap-3">
-        <p className="cursor-pointer font-fredoka uppercase">Returns and Refunds</p>
+        <p className="cursor-pointer font-fredoka uppercase">
+          Returns and Refunds
+        </p>
         <p className="cursor-pointer font-fredoka uppercase">Privacy Policy</p>
-        <p className="cursor-pointer font-fredoka uppercase">Terms of service</p>
+        <p className="cursor-pointer font-fredoka uppercase">
+          Terms of service
+        </p>
       </div>
     </div>
   );

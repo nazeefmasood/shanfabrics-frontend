@@ -83,6 +83,10 @@
     animation: scroll 180s linear infinite;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 @keyframes scroll {
     to {
         transform: translateX(calc(-100% - 8px));
@@ -101,3 +105,4 @@
     scrollbar-width: none;
     /* Firefox */
 }
+

@@ -16,7 +16,7 @@ const Products = () => {
         </h2>
         <hr className="h-[2px] bg-black flex-1" />
       </div>
-      <div className="flex justify-center mt-10 ">
+      <div className="flex justify-center mt-20 ">
         <div className="flex items-center min-h-min">
           {featuredProducts.map((product, index) => (
             <div

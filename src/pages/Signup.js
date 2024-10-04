@@ -4,11 +4,10 @@ import MyInput from "../components/actions/MyInput";
 import Video from "../images/video.mp4";
 import overlay from "../images/over_3.png";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   return (
     <div className="p-8 w-full max-h-screen  flex justify-between  gap-4">
-      {/* Left section (Sign Up Form) */}
       <div className="w-[35vw] p-8 flex flex-col gap-4">
         <div className="mb-20">
           <h1 className="font-robson text-[80px] text-center font-semibold leading-4">
@@ -17,7 +16,7 @@ const Login = () => {
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <h2 className="font-robson text-[40px] font-semibold leading-2">
-            Log In ACCOUNT
+            SIGN UP ACCOUNT
           </h2>
           <p className="font-fedroka  font-semibold">
             ENTER YOUR INFORMATION TO CONTINUE
@@ -84,24 +83,25 @@ const Login = () => {
           <hr className="flex-1 bg-black h-[2px]" />
         </div>
         <div className="flex flex-col gap-4">
+          <MyInput title={"FULL NAME"} type={"text"} />
           <MyInput title={"EMAIL ADDRESS"} type={"email"} />
           <MyInput title={"PASSWORD"} type={"password"} />
           <MyButton
-            title={"Log in"}
+            title={"Sign up"}
             styles={
-              "bg-black mt-10 text-white py-4 rounded-md font-robson text-[28px] tracking-wider"
+              "bg-black text-white py-4 rounded-md font-robson text-[28px] tracking-wider"
             }
           />
         </div>
         <div className="flex gap-2 justify-center items-center">
           <p className="font-fredoka text-gray-600 uppercase cursor-default">
-            {"Don't have an and account ?"}
+            Already have and account ?
           </p>
           <a
             className="font-fredoka text-gray-600 uppercase font-bold cursor-pointer"
-            onClick={() => navigate("/create_account")}
+            onClick={() => navigate("/login")}
           >
-            Sign up
+            Log in
           </a>
         </div>
       </div>
@@ -127,4 +127,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

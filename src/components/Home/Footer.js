@@ -1,8 +1,8 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ id }) => {
   return (
-    <div className="mt-10 bg-black min-h-screen ">
+    <div className=" bg-black min-h-screen " id={id}>
       <div className="flex justify-between items-center gap-2">
         <hr className="h-[2px] bg-black flex-1" />
         <h2 className="font-robson min-w-min font-semibold text-[240px] tracking-wider text-white cursor-pointer">
@@ -30,7 +30,9 @@ const Footer = () => {
                 fill="#ffffff"
               ></path>
             </svg>
-            <p className="text-white text-[30px] font-robson  tracking-wider">WHATSAPP</p>
+            <p className="text-white text-[30px] font-robson  tracking-wider">
+              WHATSAPP
+            </p>
           </li>
           <li className="flex items-center gap-2">
             <svg
@@ -47,7 +49,9 @@ const Footer = () => {
                 fill="#ffffff"
               />
             </svg>
-            <p className="text-white text-[30px] font-robson tracking-wider">INSTAGRAM</p>
+            <p className="text-white text-[30px] font-robson tracking-wider">
+              INSTAGRAM
+            </p>
           </li>
           <li className="flex items-center gap-2">
             <svg
@@ -81,7 +85,9 @@ const Footer = () => {
                 fill="#ffffff"
               />
             </svg>
-            <p className="text-white text-[30px] font-robson tracking-wider">FACEBOOK</p>
+            <p className="text-white text-[30px] font-robson tracking-wider">
+              FACEBOOK
+            </p>
           </li>
         </ul>
       </div>

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div className="w-full max-w-screen mx-auto  overflow-x-hidden ">
       <Header />
       <Outlet />
-      <Footer />
+      <Footer id="footer" />
     </div>
   );
 };

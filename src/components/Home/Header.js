@@ -69,25 +69,25 @@ const Header = () => {
   };
   return (
     <header>
-      <nav className="flex justify-between items-center p-8 border-b-[1px] border-black">
+      <nav className="flex justify-between items-center px-8 border-b-[1px] border-black">
         <a
-          className="font-fredoka font-semibold text-[30px] cursor-pointer"
+          className="font-robson font-semibold text-[50px] cursor-pointer tracking-wider"
           onClick={() => setOpenMenu(!openMenu)}
         >
           MENU
         </a>
         <a
-          className="font-fredoka font-semibold text-[30px] cursor-pointer"
+          className="font-robson font-semibold text-[60px] cursor-pointer tracking-wider"
           onClick={() => navigate("/")}
         >
           SHAN FABRICS
         </a>
         <a
-          className="font-fredoka font-semibold text-[30px] cursor-pointer flex gap-1"
+          className="font-robson font-semibold text-[50px] cursor-pointer flex gap-1 leading-[50px]"
           onClick={() => setOpenCart(!openCartMenu)}
         >
           CART
-          <div className="bg-black text-white px-3">{cartItems.length}</div>
+          <p className="bg-black text-white px-1">{cartItems.length}</p>
         </a>
       </nav>
 

@@ -16,7 +16,7 @@ const OrderSummary = () => {
         {products.slice(0, 4).map((product) => (
           <div className="flex gap-3">
             <div className="h-[200px] w-[150px] overflow-hidden">
-              <img src={product.image} className="object-cover w-full h-full" />
+              <img src={product.image[0]} className="object-cover w-full h-full" />
             </div>
             <div className="flex-1 flex flex-col">
               <div className="flex justify-between">

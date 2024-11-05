@@ -3,9 +3,6 @@ import React from "react";
 const OrdersHelp = () => {
   return (
     <div className=" flex flex-col gap-4">
-      <h1 className="font-robson text-[120px] font-semibold leading-[80px] mb-12">
-        Orders
-      </h1>
       <div className="flex gap-1">
         <h2 className="font-fredoka w-[450px] uppercase  text-lg font-semibold">
           Placing An Order

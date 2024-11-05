@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PrivacyPolicy = () => {
-  return (
-    <div>
-    <p>Privacy</p>
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicy;

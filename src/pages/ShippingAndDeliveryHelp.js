@@ -3,9 +3,6 @@ import React from "react";
 const ShippingAndDeliveryHelp = () => {
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="font-robson text-[120px] font-semibold leading-[80px] mb-12">
-        Shipping and Delivery
-      </h1>
       <div className="flex ">
         <h2 className="font-fredoka w-[450px] uppercase text-lg font-semibold">
           Fees and shipping time

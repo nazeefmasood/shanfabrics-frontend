@@ -3,10 +3,7 @@ import React from "react";
 const ReturnAndRefund = () => {
   return (
     <div>
-      <h1 className="font-robson text-[120px] font-semibold leading-[80px] mb-12">
-        Returns and Refunds
-      </h1>
-      <div className="flex">
+        <div className="flex">
         <h2 className="font-fredoka w-[450px] uppercase  text-lg font-semibold">
           Make a return
         </h2>

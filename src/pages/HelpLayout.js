@@ -1,183 +1,82 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Home/Header";
 import Footer from "../components/Home/Footer";
 
 const HelpLayout = () => {
   const location = useLocation();
-  const [name, setName] = useState("");
+  const [activeSection, setActiveSection] = useState("");
+
+  const navigationItems = [
+    { path: "order_help", label: "Orders" },
+    { path: "payments_methods", label: "Payments Methods" },
+    { path: "shipping_and_delivery", label: "Shipping and Delivery" },
+    { path: "return_and_refund", label: "Returns and Refunds" },
+    { path: "assistance", label: "Assistance" },
+    { path: "privacy_policy", label: "Privacy Policy" },
+    { path: "term_of_service", label: "Terms of Service" },
+  ];
+
   useEffect(() => {
-    let path = location.pathname;
-    let namePath = path.split("/");
-    console.log(namePath[2]);
-    if (namePath[2] === "order_help") {
-      setName("Orders");
-    }
-    if (namePath[2] === "payments_methods") {
-      setName("Payments methods");
-    }
-    if (namePath[2] == "shipping_and_delivery") {
-      setName("Shipping and Delivery");
-    }
-    if (namePath[2] == "return_and_refund") {
-      setName("Returns and Refunds");
-    }
-    if (namePath[2] == "assistance") {
-      setName("Assistance");
-    }
-    if (namePath[2] == "privacy_policy") {
-      setName("privacy policy");
-    }
-    if (namePath[2] == "term_of_service") {
-      setName("Term of Service");
-    }
+    const path = location.pathname;
+    const section = path.split("/")[2];
+    const matchedItem = navigationItems.find((item) => item.path === section);
+    setActiveSection(matchedItem?.label || "");
   }, [location.pathname]);
+
   return (
     <>
       <Header />
-      <div className="min-h-screen flex flex-col p-8 gap-[10px]">
-        <h1 className="font-robson text-[320px] text-center font-semibold leading-[230px] mb-12">
-          {name}
-        </h1>
-        <nav className="w-full flex justify-center ">
-          <ul className="flex flex-row ">
-            <Link
-              to="/help/order_help"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Orders" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Orders
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-            <Link
-              to="/help/payments_methods"
-              className={`border-y-2 border-dotted flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Payments methods" ? "border-black italic" : ""
-              }`}
-            >
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-              <p className="font-fredoka uppercase font-normal text-md">
-                Payment Methods
-              </p>
-            </Link>
-            <Link
-              to="/help/shipping_and_delivery"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Shipping and Delivery" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Shipping and Delivery
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-            <Link
-              to="/help/return_and_refund"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Returns and Refunds" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Returns and Refunds
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-            <Link
-              to="/help/assistance"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Assistance" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Assistance
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-            <Link
-              to="/help/privacy_policy"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "privacy policy" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Privacy Policy
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-            <Link
-              to="/help/term_of_service"
-              className={`border-y-2 border-dotted pl-2 flex justify-between items-center cursor-pointer hover:border-black hover:border-dashed ${
-                name == "Term of Service" ? "border-black italic" : ""
-              }`}
-            >
-              <p className="font-fredoka uppercase font-normal text-md">
-                Terms and Service
-              </p>
-              <svg
-                width="40px"
-                height="40px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="2" fill="#000000" />
-              </svg>
-            </Link>
-          </ul>
-        </nav>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden py-20 bg-gradient-to-b from-gray-50 to-white">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-black/5 rounded-full blur-3xl transform rotate-12" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-black/5 rounded-full blur-3xl" />
 
-        <Outlet />
+          <div className="container mx-auto px-4">
+            <h1 className="font-robson text-[180px] text-center font-semibold leading-none mb-6 text-black/90">
+              {activeSection || "Help Center"}
+            </h1>
+            <p className="text-center text-xl text-black/60 max-w-2xl mx-auto">
+              Find answers to your questions and learn more about our services
+            </p>
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <div className="sticky top-0 bg-white border-y border-black/10 z-50">
+          <div className="container mx-auto px-4 py-1 overflow-x-auto">
+            <nav className="flex justify-start items-center min-w-max gap-2">
+              {navigationItems.map((item, index) => (
+                <Link
+                  key={item.path}
+                  to={`/help/${item.path}`}
+                  className={`
+                    group relative py-4 px-6 flex items-center gap-2
+                    font-fredoka text-sm uppercase tracking-wider
+                    transition-colors duration-200
+                    ${
+                      activeSection === item.label
+                        ? "text-black"
+                        : "text-black/60 hover:text-black"
+                    }
+                  `}
+                >
+                  
+                  {item.label}
+                  {activeSection === item.label && (
+                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black" />
+                  )}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Content Area */}
+        <div className="container mx-auto px-4 py-12">
+          <Outlet />
+        </div>
       </div>
       <Footer />
     </>

@@ -64,7 +64,6 @@
     border-block: 1px solid;
     overflow: hidden;
     user-select: none;
-
     display: flex;
     gap: 2px;
 }
@@ -105,4 +104,3 @@ html {
     scrollbar-width: none;
     /* Firefox */
 }
-
